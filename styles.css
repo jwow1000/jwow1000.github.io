@@ -10,190 +10,126 @@ html {
 
 body {
 
-    background: rgb(243, 252, 123);
-    background: radial-gradient(circle, rgba(243, 252, 123, 1) 0%, rgba(41, 245, 212, 0.6363139005602241) 45%, rgba(255, 229, 179, 0.7763699229691876) 100%);
+    background: rgb(173, 181, 61);
+    background: radial-gradient(circle, rgb(57, 137, 171) 0%, rgba(41, 245, 212, 0.6363139005602241) 45%, rgba(255, 229, 179, 0.7763699229691876) 100%);
     /* Use a system font, if none are available use an available sans-sarif   font */
     z-index: -1;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
+    min-height: 100%;
 
 }
 
-#border {
-    background-image: url('images/border.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    /* object-fit: contain; */
-    z-index: 69;
-
-}
-
-#top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60% 40%;
-    grid-template-areas:
-        "input input"
-        "search rando";
-
-}
-
-#searchBar {
-    grid-area: input;
-    width: 90%;
-    margin: 1rem auto;
-}
-
-input {
+#name {
     display: block;
-    width: 100%;
-    height: 2rem;
-    font-size: 1rem;
-    text-align: center;
+    height: 10rem;
+    width: 10rem;
+    margin: 0 auto;
+
 }
 
-button {
-    width: 5rem;
-    height: 2rem;
-    text-align: center;
-    font-size: 0.75rem;
-    margin: 1rem;
-}
-
-#searchButt {
-    grid-area: search;
-    margin: auto;
-}
-
-#randoButt {
-    grid-area: rando;
-    margin: auto;
-}
-
-#imageArea {
+nav {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    z-index: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(90, 200, 125);
 }
 
-.bgPatterns {
-    background-image: url('images/pattern.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 10rem;
-    height: 10rem;
-    margin: 0;
-
-}
-
-.coolImg {
-    padding: 0.5rem;
-    display: block;
-    width: 10rem;
-    height: 10rem;
-    margin: 0;
-    object-fit: contain;
-}
 
 a {
-    position: fixed;
-    bottom: 20%;
-    z-index: 10;
-    font-size: 1.25rem;
-
-}
-
-#youTube {
-    color: rgb(243, 133, 255);
-    backdrop-filter: invert(60%);
-    position: fixed;
-    right: 2%;
-}
-
-#reSearch {
-    color: rgb(243, 133, 255);
-
-    backdrop-filter: invert(60%);
-    position: fixed;
-}
-
-#discLink {
-    color: rgb(243, 133, 255);
-    backdrop-filter: invert(60%);
-    position: fixed;
-    left: 2%;
+    font-size: 1.5rem;
 }
 
 a:hover {
-    background-color: rgb(220, 110, 190);
+    background-color: rgb(200, 90, 200);
 }
 
-#focusImg {
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
+footer {
+    position: absolute;
+    transform: translateX(50%);
+    bottom: 1%;
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
-/* scale up for smaller windows and tablets */
+
+
+img:hover {
+    animation: rotationZ 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.rotateY {
+    animation: rotationY 20s;
+}
+
+@keyframes rotationY {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(359deg);
+
+    }
+}
+
+.rotateZ {
+    animation: rotationZ 20s;
+}
+
+@keyframes rotationZ {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(359deg);
+
+    }
+}
+
+.linear {
+    animation-timing-function: linear;
+}
+
+.infinite {
+    animation-iteration-count: infinite;
+}
+
 @media (min-width: 600px) and (max-width: 1199px) {
-    .coolImg {
-        width: 15rem;
+    #name {
         height: 15rem;
-    }
-
-    .bgPatterns {
         width: 15rem;
-        height: 15rem;
-    }
-
-    input {
-        height: 3rem;
-        font-size: 2rem;
-    }
-
-    button {
-        width: 7rem;
-        height: 2rem;
-        font-size: 1rem;
     }
 
     a {
-        font-size: 2rem;
-        bottom: 3%;
+        font-size: 3rem;
+    }
 
+    footer {
+        font-size: 2rem;
     }
 }
 
-/* sclae up full screen monitors/laptops */
 @media (min-width: 1200px) {
-    .coolImg {
-        width: 17rem;
-        height: 17rem;
-    }
-
-    .bgPatterns {
-        width: 17rem;
-        height: 17rem;
-    }
-
-    input {
-        height: 5rem;
-        font-size: 4rem;
-    }
-
-    button {
-        width: 6rem;
-        height: 2.5rem;
-        font-size: 1rem;
+    #name {
+        height: 20rem;
+        width: 20rem;
     }
 
     a {
-        font-size: 3.75rem;
-        bottom: 1%;
+        font-size: 5rem;
+    }
+
+    footer {
+        font-size: 3rem;
     }
 }
