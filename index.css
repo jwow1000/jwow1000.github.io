@@ -1,4 +1,4 @@
-#header-resume {
+#header-Portfolio {
   text-align: center;
   font-size: 2rem;
   font-family: menlo;
@@ -8,9 +8,30 @@
   margin: 0 auto;
 }
 
-#link-Section-resume {
+#linkSection-Portfolio {
   display: flex;
   flex-flow: column;
   align-items: center;
   margin: 4rem 0 0 0;
+}
+
+.picLink-Portfolio {
+  display: flex;
+  width: 20vw;
+  height: 20vw;
+  border: 0.1rem solid black;
+  background-origin: padding-box;
+  padding: 0.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.aLink-Portfolio {
+  background-color: white;
+  padding: 0.5rem;
+  font-size: 1.5rem;
 }
