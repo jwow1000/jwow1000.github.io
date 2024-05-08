@@ -17,11 +17,11 @@
 
 .picLink-Portfolio {
   display: flex;
-  width: 20vw;
-  height: 20vw;
-  border: 0.1rem solid black;
-  background-origin: padding-box;
-  padding: 0.5rem;
+  width: 25vw;
+  height: 25vw;
+  outline: 0.1rem solid black;
+  padding: 2rem;
+  background-origin: content-box;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
