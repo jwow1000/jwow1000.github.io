@@ -1,0 +1,16 @@
+#header-resume {
+  text-align: center;
+  font-size: 2rem;
+  font-family: menlo;
+  border: 0.1rem solid black;
+  /* padding: 0.5rem; */
+  width: 60vw;
+  margin: 0 auto;
+}
+
+#link-Section-resume {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 4rem 0 0 0;
+}
